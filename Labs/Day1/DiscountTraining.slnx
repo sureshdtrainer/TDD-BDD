@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DiscountCalculator.Tests/DiscountCalculator.Tests.csproj" />
+  <Project Path="DiscountCalculator/DiscountCalculator.csproj" />
+</Solution>
