@@ -27,6 +27,8 @@ public class CheckoutServiceTests
         //Act
         var result = checkoutService.GetTotal(100m);
 
+        taxMock.Verify(x => x.CalculateTax(100m), Times.Once); // Verify that CalculateTax was called once with 100m
+
         Assert.That(result, Is.EqualTo(118m)); // 100 + 18 = 118
     }
 

@@ -41,7 +41,7 @@ public class DiscountServiceTests
     public void CalculateFinalAmount_ReturnsExpectedValue(decimal amount, decimal expected)
     {
         var result = _service.CalculateFinalAmount(amount);
-        Assert.That(result, Is.EqualTo(expected));
+        Assert.That(result, Is.EqualTo(decimal.Round(expected, 2, MidpointRounding.AwayFromZero)));
     }
 
     [Test]
