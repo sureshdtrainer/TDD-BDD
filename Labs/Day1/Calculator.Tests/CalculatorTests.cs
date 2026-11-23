@@ -27,4 +27,23 @@ public class Tests
         var result = _calculator.Subtract(5, 3);
         Assert.AreEqual(2, result);
     }
+
+    [Test]
+    public void Multiply_TwoNumbers_ReturnsProduct()
+    {
+        var result = _calculator.Multiply(2, 3);
+        Assert.AreEqual(6, result);
+    }
+
+    public void Divide_TwoNumbers_ReturnsQuotient()
+    {
+        var result = _calculator.Divide(6, 3);
+        Assert.AreEqual(2, result);
+    }
+
+    [Test]
+    public void Divide_ByZero_ThrowsException()
+    {
+        Assert.Throws<DivideByZeroException>(() => _calculator.Divide(6, 0));
+    }
 }
