@@ -32,4 +32,21 @@ public class DiscountServiceTests
         var result = _service.CalculateFinalAmount(600m);
         Assert.That(result, Is.EqualTo(480));
     }
+
+    [TestCase(99.99, 99.99)]
+    [TestCase(100, 90)]
+    [TestCase(500, 400)]
+    [TestCase(700, 560)]
+    [Test]
+    public void CalculateFinalAmount_ReturnsExpectedValue(decimal amount, decimal expected)
+    {
+        var result = _service.CalculateFinalAmount(amount);
+        Assert.That(result, Is.EqualTo(expected));
+    }
+
+    [Test]
+    public void CalculateFinalAmount_NegativeAmount_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => _service.CalculateFinalAmount(-50m));
+    }
 }

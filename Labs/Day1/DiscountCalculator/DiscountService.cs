@@ -4,7 +4,12 @@ public class DiscountService
 {
     public decimal CalculateFinalAmount(decimal amount)
     {
-        if(amount >= 500m)
+        if(amount < 0)
+        {
+            throw new ArgumentException("Amount cannot be negative.");
+        }
+
+        if (amount >= 500m)
         {
             return amount * 0.8m; // Apply 20% discount
         }
