@@ -4,17 +4,15 @@ Feature: Order discounts
 	I want eligible orders to receive discount
 	so that I pay the correct final amount
 
-Scenario: Order below discount threshold
-	Given an order amount of 80
+Scenario Outline: Calculate discount based on order amount
+	Given an order amount of <amount>
 	When the final amount is calculated
-	Then the final amount should be 80
+	Then the final amount should be <finalAmount>
 
-Scenario: Order qualites for first discount band
-	Given an order amount of 200
-	When the final amount is calculated
-	Then the final amount should be 180
-
-Scenario: Order qualifies for second discount band
-	Given an order amount of 600
-	When the final amount is calculated
-	Then the final amount should be 480
+	Examples:
+      | amount | finalAmount |
+      | 80     | 80          |
+      | 100    | 90          |
+      | 200    | 180         |
+      | 500    | 400         |
+      | 600    | 480         |
