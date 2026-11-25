@@ -1,5 +1,12 @@
 <Solution>
+  <Folder Name="/SampleDiscountUI/">
+    <Project Path="SampleDiscountUI/SampleDiscountUI.csproj" />
+  </Folder>
+  <Project Path="DiscountApi.Tests/DiscountApi.Tests.csproj" />
+  <Project Path="DiscountApi/DiscountApi.csproj" />
   <Project Path="DiscountBdd.Tests/DiscountBdd.Tests.csproj" />
   <Project Path="DiscountCalculator.Tests/DiscountCalculator.Tests.csproj" />
   <Project Path="DiscountCalculator/DiscountCalculator.csproj" />
+  <Project Path="DiscountEngine/DiscountEngine.csproj" />
+  <Project Path="DiscountUi.Tests/DiscountUi.Tests.csproj" />
 </Solution>
