@@ -9,4 +9,5 @@
   <Project Path="DiscountCalculator/DiscountCalculator.csproj" />
   <Project Path="DiscountEngine/DiscountEngine.csproj" />
   <Project Path="DiscountUi.Tests/DiscountUi.Tests.csproj" />
+  <Project Path="PlaywrightTraining.Tests/PlaywrightTraining.Tests.csproj" />
 </Solution>
