@@ -2,7 +2,7 @@
 <RunSettings>
   <Playwright>
 	<LaunchOptions>
-	  <Headless>false</Headless>
+	  <Headless>true</Headless>
 	</LaunchOptions>
   </Playwright>
 </RunSettings>
